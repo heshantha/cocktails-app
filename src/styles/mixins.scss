@@ -1,0 +1,7 @@
+@mixin responsiveFontSize($normalSize, $smallSize) {
+    font-size: $normalSize;
+  
+    @media (max-width: 600px) { // assuming the 'sm' breakpoint is 600px
+      font-size: $smallSize;
+    }
+  }

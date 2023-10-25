@@ -1,0 +1,228 @@
+// Main
+::selection {
+  background: $white;
+  color: $white;
+}
+::-moz-selection {
+  background: $white;
+  color: $white;
+}
+
+article,
+aside,
+details,
+figcaption,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+menu,
+ol,
+ul {
+  padding: 0 !important;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+section {
+  position: relative;
+}
+
+// Typography
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: $large;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: $large;
+}
+
+h3 {
+  font-size: $medium;
+}
+
+p {
+  font-size: $exsmall;
+}
+
+@media (max-width: $tablet) {
+  h1,
+  h2 {
+    font-size: $medium;
+  }
+
+  h3 {
+    font-size: $small;
+  }
+}
+
+//common style
+body {
+  background: $white;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Yantramanav", Arial, sans-serif;
+  color: $black;
+  .box-centered {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: $primary-margin;
+    text-align: center;
+  }
+  .text-center {
+    text-align: center;
+  }
+
+  .text-italic-center {
+    text-align: center;
+    font-style: italic;
+  }
+  .card-title {
+    font-size: $small;
+    color: secondary;
+    margin: 0 8px 0 0;
+    height: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .favourite-button {
+    margin: 0 auto;
+    display: block;
+    svg {
+      font-size: 2rem;
+    }
+  }
+  .card-image {
+    height: $card-image-height;
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .header-block {
+    .refresh-button {
+      padding: $refresh-padding;
+      margin: $refresh-margin;
+      color: $white;
+    }
+    .refresh-icon {
+      font-size: $refresh-icon-size;
+    }
+    a {
+      color: $white;
+    }
+  }
+  .tab-label {
+    font-size: $small;
+    min-width: $tab-min-width;
+    font-weight: bold;
+
+    @include responsiveFontSize($small, $exsmall);
+    @media (max-width: 600px) {
+      min-width: $tab-min-width-small;
+    }
+  }
+
+  .logo {
+    height: 70px;
+    width: 100%;
+    padding: 5px 5px 0 0;
+    margin: 0;
+
+    @media (max-width: 600px) {
+      height: 50px;
+      width: 80%;
+      margin: 10px 0 0 25px;
+    }
+  }
+  .search-box {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    margin: $secondry-margin;
+  }
+
+  .no-cocktails-text {
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 500;
+    text-align: center;
+    font-style: italic;
+  }
+  .search-input-box {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .textfield-base {
+    &.MuiInputBase-root {
+      flex: 1;
+    }
+  }
+
+  .mobile-textfield {
+    width: 180px;
+  }
+
+  .search-button {
+    height: 100%;
+  }
+
+  .mobile-button {
+    width: 80px;
+  }
+  .search-input-box {
+    .MuiOutlinedInput-root {
+      border-radius: 4px 0 0 4px;
+    }
+    .search-button {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+  .removed-button {
+    background-color: $red;
+    color: $white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    min-width: 30px;
+    float: right;
+    position: relative;
+    top: -10px;
+    right: 20px;
+  }
+  .grid-cotiner {
+    margin-top: 50px;
+}
+.badge-block {
+  color: $white;
+}
+}
